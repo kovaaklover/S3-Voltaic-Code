@@ -195,22 +195,23 @@ for key, values in Score_Dic_S.items():
 
     values[19:37] = RankL
 
+print('test1')
 # GOOGLE SHEETS API
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-
+print('test1')
 # JSON CREDENTIAL FILE PATH
 creds_dict = json.loads(os.getenv('GSPREAD_CREDENTIALS'))
 creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
-
+print('test1')
 # AUTHORIZE THE CLIENT
 client = gspread.authorize(creds)
-
+print('test1')
 # OPEN GOOGLE SHEET
 sheet = client.open('S3_Voltaic').sheet1
-
+print('test1')
 # CLEAR EXISTING DATA IN GOOGLE SHEET
 sheet.clear()
-
+print('test1')
 # SHEET HEADERS
 header = ['PlayerID',  'Pasu Voltaic','B180 Voltaic','Popcorn Voltaic','ww3t Voltaic','1w4ts Voltaic','6 Sphere Hipfire Voltaic',
           'Smoothbot Voltaic', 'Air Angelic 4 Voltaic', 'PGTI Voltaic', 'FuglaaXYZ Voltaic', 'Ground Plaza Voltaic', 'Air Voltaic',
@@ -222,7 +223,7 @@ header = ['PlayerID',  'Pasu Voltaic','B180 Voltaic','Popcorn Voltaic','ww3t Vol
 
 # WRITE HEADERS TO FIRST ROW
 sheet.append_row(header)
-
+print('test1)
 # SEND DATA FROM DICTIONARY TO ARRAY
 Per = 0
 rows_to_update = []
