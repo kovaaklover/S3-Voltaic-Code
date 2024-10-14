@@ -223,7 +223,7 @@ header = ['PlayerID',  'Pasu Voltaic','B180 Voltaic','Popcorn Voltaic','ww3t Vol
 
 # WRITE HEADERS TO FIRST ROW
 sheet.append_row(header)
-print('test1)
+print('test1')
 # SEND DATA FROM DICTIONARY TO ARRAY
 Per = 0
 rows_to_update = []
