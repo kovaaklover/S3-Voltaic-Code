@@ -4,6 +4,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from threading import Lock
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+import json
 
 # KOVAAKs LEADERBOARD IDs
 Leaderboard_ID = [
@@ -198,20 +199,20 @@ for key, values in Score_Dic_S.items():
 print('test1')
 # GOOGLE SHEETS API
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-print('test1')
+print('test2')
 # JSON CREDENTIAL FILE PATH
 creds_dict = json.loads(os.getenv('GSPREAD_CREDENTIALS'))
 creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
-print('test1')
+print('test3')
 # AUTHORIZE THE CLIENT
 client = gspread.authorize(creds)
-print('test1')
+print('test4')
 # OPEN GOOGLE SHEET
 sheet = client.open('S3_Voltaic').sheet1
-print('test1')
+print('tes5')
 # CLEAR EXISTING DATA IN GOOGLE SHEET
 sheet.clear()
-print('test1')
+print('test6')
 # SHEET HEADERS
 header = ['PlayerID',  'Pasu Voltaic','B180 Voltaic','Popcorn Voltaic','ww3t Voltaic','1w4ts Voltaic','6 Sphere Hipfire Voltaic',
           'Smoothbot Voltaic', 'Air Angelic 4 Voltaic', 'PGTI Voltaic', 'FuglaaXYZ Voltaic', 'Ground Plaza Voltaic', 'Air Voltaic',
@@ -223,7 +224,7 @@ header = ['PlayerID',  'Pasu Voltaic','B180 Voltaic','Popcorn Voltaic','ww3t Vol
 
 # WRITE HEADERS TO FIRST ROW
 sheet.append_row(header)
-print('test1')
+print('test7')
 # SEND DATA FROM DICTIONARY TO ARRAY
 Per = 0
 rows_to_update = []
