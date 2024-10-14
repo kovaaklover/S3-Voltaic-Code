@@ -5,6 +5,7 @@ from threading import Lock
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import json
+import os
 
 # KOVAAKs LEADERBOARD IDs
 Leaderboard_ID = [
