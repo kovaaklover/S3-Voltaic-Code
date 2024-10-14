@@ -1,5 +1,3 @@
 requests
-from concurrent.futures
-threading
 gspread
-oauth2client.service_account
+oauth2client
