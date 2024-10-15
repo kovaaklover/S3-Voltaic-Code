@@ -143,7 +143,7 @@ Score_Dic = {}
 score_lock = Lock()  # Create a lock for protecting shared resources
 
 # START THREADER
-with ThreadPoolExecutor(max_workers=20) as executor:
+with ThreadPoolExecutor(max_workers=10) as executor:
     Count = 0
     itera = 1
     futures = []
